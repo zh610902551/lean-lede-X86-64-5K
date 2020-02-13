@@ -64,15 +64,15 @@ jobs:
     - name: Clone passwall code
       run: | 
         cd package
-        mkdir openwrt-package
-        cd openwrt-package
+        mkdir openwrt-packages
+        cd openwrt-packages
         git clone https://github.com/hong0980/luci-app-passwall.git
   
     - name: Clone Hello World code
       run: |
         cd package
-        mkdir openwrt-package
-        cd openwrt-package
+        mkdir openwrt-packages
+        cd openwrt-packages
         git clone https://github.com/jerrykuku/luci-app-vssr.git
 
     - name: Clone source code
