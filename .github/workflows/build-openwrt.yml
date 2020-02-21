@@ -60,21 +60,6 @@ jobs:
         sudo -E apt-get -q purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
-        
-    - name: Clone passwall code
-      run: | 
-        cd openwrt-package
-        mkdir packages
-        cd openwrt-packages
-        git clone https://github.com/hong0980/luci-app-passwall.git
-  
-    - name: Clone Hello World code
-      run: |
-        cd openwrt-package
-        mkdir packages
-        cd openwrt-packages
-        git clone https://github.com/jerrykuku/luci-app-vssr.git
-
 
     - name: Clone source code
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
